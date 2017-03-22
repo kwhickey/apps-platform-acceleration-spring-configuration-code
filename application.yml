@@ -10,4 +10,6 @@ security:
     enabled: false
 endpoints:
   sensitive: false
-
+queue:
+  billing:
+    name: billing-queue
