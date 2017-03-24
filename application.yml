@@ -5,11 +5,24 @@
 #    instance-info-replication-interval-seconds: 5
 #    initial-instance-info-replication-interval-seconds: 6
 global-prop: my-global-prop-val-01
+
 security:
   basic:
     enabled: false
+
+# NOTE: May need to move this down to app level. Known to cause issues with security in spring cloud eureka locally
+management:
+  security:
+    enabled: false
+
 endpoints:
   sensitive: false
+
 queue:
   billing:
     name: billing-queue
+
+logging:
+  level:
+    io:
+      pivotal: DEBUG
